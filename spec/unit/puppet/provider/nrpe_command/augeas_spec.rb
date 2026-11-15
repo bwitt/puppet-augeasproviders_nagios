@@ -105,8 +105,8 @@ describe provider_class do
                   ))
 
       expect(txn).to be_any_failed
-      expect(@logs.first.level).to eq(:err)
-      expect(@logs.first.message).to include(target)
+      expect(txn.report.logs.first.level).to eq(:err)
+      expect(txn.report.logs.first.message).to include(target)
     end
   end
 end
